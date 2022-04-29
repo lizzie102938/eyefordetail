@@ -7,7 +7,7 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav)
 
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#010101] text-[#B9BCC1]'>
+    <nav className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#010101] text-[#B9BCC1] font-bold'>
       {/*menu*/}
       <ul  className='hidden md:flex'>
         <li><Link to="home" smooth={true} duration={500}>
@@ -55,7 +55,7 @@ const Navbar = () => {
           Contact
         </Link></li>
       </ul>
-  </div>
+  </nav>
   );
 };
 
