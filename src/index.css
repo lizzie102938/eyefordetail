@@ -2,6 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300&family=Rubik:wght@300;400&display=swap');
+
+@layer base {
+  body {
+    @apply font-[Raleway];
+    @apply bg-[#010101]
+  }
+  li {
+    @apply px-4;
+    @apply cursor-pointer;
+  }
+}
+
+/* .content-skillup {
+  background-repeat: no-repeat;
+  background-size: 320px 200px;
+  background-position: center;
+} */
+
+/* .content-eyefordetail {
+  background-repeat: no-repeat;
+  background-size: 320px 200px;
+  background-position: center;
+}
+
+.content-BBB {
+  background-repeat: no-repeat;
+  background: cover;
+  background-size: 320px 200px;
+  background-position: center;
+}
+
+.content-rentabuddy {
+  background-repeat: no-repeat;
+  background-size: 320px 200px;
+  background-position: center;
+}
+
+.content-div {
+  height: 200px;
+  width: 320px
+}
+
+.content-div:hover {
+  background-image: linear-gradient(
+    to right,
+    rgba(235, 220, 231, 0.877),
+    hsla(348, 35%, 67%, 0.895)
+  )!important;
+} */
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   height: 100%;
   width: 100%;
@@ -13,4 +68,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */

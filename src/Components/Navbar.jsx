@@ -1,35 +1,31 @@
 import React, {useState} from 'react';
 import {FaBars, FaTimes} from 'react-icons/fa';
-import {Link} from 'react-scroll';
+// import {Link} from 'react-scroll';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
   const handleClick = () => setNav(!nav)
 
   return (
-    <nav className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#010101] text-[#B9BCC1] font-bold'>
+    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 mb-50 bg-[#010101] text-[#B9BCC1] font-bold'>
       {/*menu*/}
       <ul  className='hidden md:flex'>
-        <li><Link to="home" smooth={true} duration={500}>
-          Home
+        <Link to="/" smooth={true} duration={500}>
+          <li>Home</li>
         </Link>
-        </li>
-        <li><Link to="about" smooth={true} duration={500}>
-          About
+        <Link to="/about" smooth={true} duration={500}>
+          <li>About</li>
         </Link>
-        </li>
-        <li><Link to="skills" smooth={true} duration={500}>
-          OurServices
+        <Link to="/ourservices" smooth={true} duration={500}>
+          <li>OurServices</li>
         </Link>
-        </li>
-        <li><Link to="work" smooth={true} duration={500}>
-          Portfolio
+        <Link to="/portfolio">
+          <li>Portfolio</li>
         </Link>
-        </li>
-        <li><Link to="contact" smooth={true} duration={500}>
-          Contact
+        <Link to="/contact">
+          <li>Contact</li>
         </Link>
-        </li>
       </ul>
 
      {/*hamburger*/}
@@ -45,9 +41,10 @@ const Navbar = () => {
         <li className='py-6 text-4xl'><Link onClick={handleClick} to="about" smooth={true} duration={500}>
           About
         </Link></li>
-        <li className='py-6 text-4xl'><Link onClick={handleClick} to="skills" smooth={true} duration={500}>
+        <li className='py-6 text-4xl'><Link onClick={handleClick} to="ourservices" smooth={true} duration={500}>
           Our Services
         </Link></li>
+        {/* these need to go use routes not scroll */}
         <li className='py-6 text-4xl'><Link onClick={handleClick} to="work" smooth={true} duration={500}>
           Portfolio
         </Link></li>
@@ -55,7 +52,7 @@ const Navbar = () => {
           Contact
         </Link></li>
       </ul>
-  </nav>
+  </div>
   );
 };
 
