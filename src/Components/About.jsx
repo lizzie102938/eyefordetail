@@ -1,24 +1,31 @@
 import React from 'react'
+import Texture1 from '../Images/texture1.jpeg'
+import Lens from '../Images/Lens.jpeg'
 
 const About = () => {
   return (
-    <div name='about' className='w-full h-screen bg-[#010101] text-gray-300'>
-      <div className='flex flex-col justify-center items-center w-full h-full'>
-        <div className='max-w-[1000px] w-full px-4 grid grid-cols-2 gap-8'>
-          <div className='sm:text-right pb-8 pl-4'>
-          <p className='text-4xl font-bold inline border-b-4 border-text-gray-300'>
+    <div>
+      <div name='about' className='ml-auto my-60 w-4/5 h-screen text-[#010101] rounded-l-lg flex flex-col justify-center items-center'
+      style={{ backgroundImage: `url(${Texture1})` }}>
+        <div className='grid grid-cols-3'>
+          <div classsName='col-start-1 col-end-3'>
+            <h1 className='text-center'>
               About
-            </p>
+            </h1>
+            <h2>
+              A London-based video production agency looking to bring a new level of detail to video production.
+              A London-based video production agency looking to bring a new level of detail to video production.
+              A London-based video production agency looking to bring a new level of detail to video production.
+              A London-based video production agency looking to bring a new level of detail to video production.
+              A London-based video production agency looking to bring a new level of detail to video production.
+              A London-based video production agency looking to bring a new level of detail to video production.
+            </h2>
           </div>
-          <div></div>
-          </div>
-          <div className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4'>
-            <div className='sm:text-right text-4xl font-bold'>
-              <p>About Eye for Detail</p>
-            </div>
+          <div className='col-start-3 col-end-4'>
             <div>
-              <p>A London-based video production agency looking to bring a new level of detail to video production.</p>
+              <img src={Lens} alt='placeholder'/>
             </div>
+          </div>
         </div>
       </div>
     </div>

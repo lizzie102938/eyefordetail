@@ -3,18 +3,21 @@ import {FaBars, FaTimes} from 'react-icons/fa';
 // import {Link} from 'react-scroll';
 import { Link } from 'react-router-dom';
 
+
+
+
 const Navbar = () => {
   const [nav, setNav] = useState(false)
   const handleClick = () => setNav(!nav)
 
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 mb-50 bg-[#010101] text-[#B9BCC1] font-bold absolute z-10'>
+    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 mb-50 bg-[#010101] text-[#B9BCC1] font-bold z-10'>
       {/*menu*/}
       <ul  className='hidden md:flex'>
         <Link to="/" smooth={true} duration={500}>
           <li>Home</li>
         </Link>
-        <Link to="/about" smooth={true} duration={500}>
+        <Link to="/about" smooth={true} duration={1000}>
           <li>About</li>
         </Link>
         <Link to="/ourservices" smooth={true} duration={500}>
