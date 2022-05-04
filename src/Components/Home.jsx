@@ -3,17 +3,18 @@ import React from 'react'
 import Logo from '../Images/Logo.svg'
 import About from './About';
 import OurServices from './OurServices';
+import Video from './Video';
 
 const Home = () => {
   return (
     <div>
-      <div className='container mx-auto w-full h-screen'>
+      {/* <div className=' w-full h-screen'> */}
         {/* <img className='absolute top-20 scale-75 right-20' src={Logo} alt='logo'/> */}
-      </div>
-      <div>
+      {/* </div> */}
+
+      <Video />
       <About />
       <OurServices />
-      </div>
     </div>
 
   )
