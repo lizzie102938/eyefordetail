@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
 // import CameraImage from '../Images/camera-image.jpeg'
-import Logo from '../Images/Logo.svg'
+import Logo from './Logo';
 import About from './About';
 import OurServices from './OurServices';
 import Video from './Video';
+
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       {/* </div> */}
 
       <Video />
+      <Logo />
       <About />
       <OurServices />
     </div>
