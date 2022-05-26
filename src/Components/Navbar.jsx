@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {FaBars, FaTimes} from 'react-icons/fa';
 // import {Link} from 'react-scroll';
 import { Link } from 'react-router-dom';
-
+import { motion } from 'framer-motion';
 
 
 
@@ -11,23 +11,51 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav)
 
   return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 mb-50 bg-[#010101] text-[#B9BCC1] font-bold z-10'>
+    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 mb-50 bg-[#010101] text-[#B9BCC1] font-bold z-50'>
       {/*menu*/}
       <ul  className='hidden md:flex'>
         <Link to="/" smooth={true} duration={500}>
-          <li>Home</li>
+          <motion.li
+          initial={{ y: -150}}
+          animate={{ y: 0 }}
+          transition={{delay: 0, duration: 0.5, type: 'tween'}}>
+            Home
+          </motion.li>
         </Link>
         <Link to="/about" smooth={true} duration={1000}>
-          <li>About</li>
+          <motion.li
+
+          initial={{ y: -150}}
+          animate={{ y: 0 }}
+          transition={{delay: 0.3, duration: 0.5, type: 'tween'}} >
+            About
+          </motion.li>
         </Link>
         <Link to="/ourservices" smooth={true} duration={500}>
-          <li>Our Services</li>
+          <motion.li
+
+          initial={{ y: -150}}
+          animate={{ y: 0 }}
+          transition={{delay: 0.6, duration: 0.5, type: 'tween'}}>
+            Our Services
+          </motion.li>
         </Link>
         <Link to="/portfolio">
-          <li>Portfolio</li>
+          <motion.li
+          initial={{ y: -150}}
+          animate={{ y: 0 }}
+          transition={{delay: 0.9, duration: 0.5, type: 'tween'}}>
+            Portfolio
+          </motion.li>
         </Link>
         <Link to="/contact">
-          <li>Contact</li>
+          <motion.li
+
+          initial={{ y: -150}}
+          animate={{ y: 0 }}
+          transition={{delay: 1.2, duration: 0.5, type: 'tween'}}>
+            Contact
+          </motion.li>
         </Link>
       </ul>
 

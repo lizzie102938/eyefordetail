@@ -1,11 +1,17 @@
 import React from 'react'
-import Texture1 from '../Images/texture1.jpeg'
-import Lens from '../Images/Lens.jpeg'
+import Texture1 from '../Images/texture1.jpeg';
+import Lens from '../Images/Lens.jpeg';
+import { motion } from 'framer-motion';
 
 const OurServices = () => {
   return (
     <div>
-      <div name='about' className='mr-auto my-60 w-4/5 h-screen text-[#010101] rounded-r-lg flex flex-col justify-center items-center'
+      <motion.div
+      initial={{ x: '-250vw'}}
+      animate={{ x: 0 }}
+      transition={{type: 'tween', duration: 3}}
+      name='about'
+      className='mr-auto my-60 w-4/5 h-screen text-[#010101] rounded-r-lg flex flex-col justify-center items-center'
       style={{ backgroundImage: `url(${Texture1})` }}>
         <div className='grid grid-cols-3'>
         <div className='col-start-1 col-end-2'>
@@ -27,7 +33,7 @@ const OurServices = () => {
             </h2>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
 
   );
