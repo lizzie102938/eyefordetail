@@ -9,16 +9,11 @@ import Video from './Video';
 const Home = () => {
   return (
     <div>
-      {/* <div className=' w-full h-screen'> */}
-        {/* <img className='absolute top-20 scale-75 right-20' src={Logo} alt='logo'/> */}
-      {/* </div> */}
-
       <Video />
       <Logo />
       <About />
       <OurServices />
     </div>
-
   )
 }
 

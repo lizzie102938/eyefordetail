@@ -2,19 +2,44 @@ import React from 'react'
 import Texture1 from '../Images/texture1.jpeg'
 import Lens from '../Images/Lens.jpeg'
 import { motion } from 'framer-motion';
+import {useInView} from 'react-intersection-observer';
+import {useEffect} from 'react';
+import {useAnimation} from 'framer-motion';
 
 const About = () => {
+
+  const {ref, inView} = useInView({
+    threshold: 0.2
+  });
+  const animation = useAnimation();
+
+  useEffect(() => {
+    console.log("use effect hook, inView = ", inView);
+    if(inView){
+      animation.start({
+        x: 0,
+        transition: {
+          type: 'tween', duration: 1
+        }
+      });
+    }
+    if(!inView){
+      animation.start({x: '250vw'})
+    }
+    ;
+  }, [inView]);
+
   return (
-    <div>
+    <div ref={ref}>
       <motion.div
-      initial={{ x: '250vw'}}
-      animate={{ x: 0 }}
-      transition={{type: 'tween', duration: 3}}
+      // initial={{ x: '250vw'}}
+      animate={animation}
+      // transition={{type: 'tween', duration: 3}}
       name='about'
-      className='opacity-90 ml-auto my-60 w-4/5 h-screen text-[#010101] rounded-l-lg flex flex-col justify-center items-center'
+      className='opacity-90 ml-auto my-60 w-4/5 h-[32rem] text-[#010101] rounded-l-lg flex flex-col justify-center items-center'
       style={{ backgroundImage: `url(${Texture1})` }}>
-        <div className='absolute grid grid-cols-3'>
-          <div classsName='col-start-1 col-end-3'>
+        <div className='grid grid-cols-3'>
+          <div className='col-start-1 col-end-3'>
             <h1 className='text-center' >
               About
             </h1>
