@@ -4,6 +4,7 @@ import Logo from './Logo';
 import About from './About';
 import OurServices from './OurServices';
 import Video from './Video';
+import ImageSlide from './ImageSlide';
 
 
 const Home = () => {
@@ -11,8 +12,11 @@ const Home = () => {
     <div>
       <Video />
       <Logo />
-      <About />
-      <OurServices />
+      <div className='container mx-auto px-4'>
+        <ImageSlide />
+        <About />
+        <OurServices />
+      </div>
     </div>
   )
 }

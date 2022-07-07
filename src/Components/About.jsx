@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import {useInView} from 'react-intersection-observer';
 import {useEffect} from 'react';
 import {useAnimation} from 'framer-motion';
+import Blue from '../Images/Blue_pillars.jpeg';
 
 const About = () => {
 
@@ -19,7 +20,7 @@ const About = () => {
       animation.start({
         x: 0,
         transition: {
-          type: 'tween', duration: 1
+          type: 'tween', duration: 0.6
         }
       });
     }
@@ -36,8 +37,8 @@ const About = () => {
       animate={animation}
       // transition={{type: 'tween', duration: 3}}
       name='about'
-      className='opacity-90 ml-auto my-60 w-4/5 h-[32rem] text-[#010101] rounded-l-lg flex flex-col justify-center items-center'
-      style={{ backgroundImage: `url(${Texture1})` }}>
+      className='ml-auto relative my-60 w-4/5 h-[32rem] text-[#010101] bg-white flex flex-col justify-center items-center'>
+      {/* // style={{ backgroundImage: `url(${Texture1})` }} */}
         <div className='grid grid-cols-3'>
           <div className='col-start-1 col-end-3'>
             <h1 className='text-center' >

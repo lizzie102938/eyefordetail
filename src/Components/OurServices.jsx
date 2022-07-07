@@ -19,7 +19,7 @@ const OurServices = () => {
       animation.start({
         x: 0,
         transition: {
-          type: 'tween', duration: 1
+          type: 'tween', duration: 0.6
         }
       });
     }

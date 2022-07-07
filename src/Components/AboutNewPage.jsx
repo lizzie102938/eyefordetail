@@ -12,7 +12,7 @@ const About = () => {
     <div >
       <div
       name='about'
-      className='relative top-[12rem] opacity-90 ml-auto w-4/5 h-[32rem] text-[#010101] rounded-l-lg flex flex-col justify-center items-center'
+      className='relative top-[12rem] opacity-90 ml-auto w-4/5 h-[32rem] text-[#010101] flex flex-col justify-center items-center'
       style={{ backgroundImage: `url(${Texture1})` }}>
         <div className='absolute grid grid-cols-3'>
           <div className='col-start-1 col-end-3 px-20'>
