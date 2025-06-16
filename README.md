@@ -6,6 +6,7 @@ Website for London-based video production agency. Site will be used to display p
 Site built using React JS and Tailwind CSS.
 
 ![App Screenshot](eyefordetail.png)
+![App Screenshot](about.png)
 
 ## Available Scripts
 
